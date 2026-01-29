@@ -34,7 +34,7 @@ Estas estrategias permiten comparar desempeño absoluto y ajustado por riesgo fr
 
 ## Métricas obtenidas hasta la fecha
 
-Las métricas evaluadas en el conjunto de test (2022–2024) incluyen:
+Las métricas evaluadas en el conjunto de test (2015–2024) incluyen:
 
 - Retorno total
 - CAGR (aproximado)

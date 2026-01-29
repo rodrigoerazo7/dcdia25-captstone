@@ -1,0 +1,101 @@
+# Metadatos de ejecución
+project:
+  name: "Toolkit"
+  organization: "Universidad de Chile"
+  course: "Diplomado Ciencia de Datos e Inteligencia Artificial"
+  module: "09"
+  process: "v3.1.1"
+
+run:
+  tag: "EXP-RL-001"  # opcional, permite "" (sin tag, solo timestamp)
+  portfolios_file: "portfolios.yaml"
+  #clean_output_dir: true
+
+# Datos (parámetros globales)
+data:
+  source: "yfinance"
+  start_date: "2015-01-01"
+  end_date: "2024-12-31"
+  interval: "1d"
+  auto_adjust: true
+
+  # Directorios base (cache y outputs se derivan en tiempo de ejecución o runtime)
+  cache_dir: "data/raw"
+
+  # Notas:
+  # processed_dir no se usa como global en modo multi-portafolio
+  # Los procesados se guardan dentro del output del portafolio
+  processed_dir: "data/processed"
+
+  # Valores por defecto (se sobreescriben por portafolio si existe portfolios)
+  tickers: ["^GSPC"]
+
+# Preprocesamiento
+preprocessing:
+  # forward-fill y dropna se aplican en el módulo
+  drop_all_nan_columns: true
+  drop_any_nan_rows: true
+
+returns:
+  method: "simple"  # simple o log
+
+# Features (indicadores)
+features:
+  enabled: true
+  sma_windows: [10, 20, 50]
+  ema_windows: [12, 26]
+  rsi_window: 14
+  bollinger_window: 20
+  bollinger_k: 2
+  volatility_window: 20
+
+# Forecasting (SARIMA/SARIMAX)
+forecasting:
+  enabled: true
+  order: [1, 1, 1]
+  seasonal_order: [1, 1, 1, 12]
+  horizon: 1
+
+  # Para la conversión a anual en optimization.py
+  forecast_is_monthly: true
+
+# Optimización (MVO)
+optimization:
+  enabled: true
+  risk_free_rate: 0.0
+  weight_bounds: [0.0, 1.0]
+  max_weight: null
+
+  # Mezcla de mu: forecast + histórico (anualizados)
+  mu_mix:
+    forecast_weight: 0.5
+    historical_weight: 0.5
+
+  mu_clip:
+    enabled: true
+    min: -0.5
+    max: 1.5
+
+  cov_jitter: 0.000001
+
+  rebalance_frequency: "monthly"
+
+# RL (PPO) opcional
+rl:
+  enabled: true
+  timesteps: 20000
+  reward_vol_penalty: 0.10
+
+# Evaluación
+evaluation:
+  trading_days: 252
+  risk_free_annual: 0.0
+
+experimental:
+  split:
+    train_start: "2015-01-01"
+    train_end: "2021-12-31"
+    test_start: "2022-01-01"
+    test_end: "2024-12-31"
+  baselines:
+    - "Buy&Hold"

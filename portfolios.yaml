@@ -1,0 +1,62 @@
+portfolios:
+  - name: "FANG"
+    tickers: ["META", "AMZN", "NFLX", "GOOGL"]
+
+  - name: "FAANG"
+    tickers: ["META", "AAPL", "AMZN", "NFLX", "GOOGL"]
+
+  - name: "MAG7"
+    tickers: ["META", "AAPL", "AMZN", "GOOGL", "MSFT", "NVDA", "TSLA"]
+
+  - name: "SP500_TOP10"
+    tickers: ["AAPL", "MSFT", "GOOGL", "AMZN", "NVDA", "META", "BRK-B", "UNH", "JNJ", "V"]
+
+  - name: "DIVERSIFIED_SECTORS"
+    tickers: ["AAPL", "JPM", "JNJ", "XOM", "PG", "HD", "VZ", "NEE", "AMT", "BLK"]
+    # Tech, Financiero, Salud, Energía, Consumo, Retail, Telecom, Utilities, REIT, Asset Mgmt
+
+  - name: "DIVIDEND_KINGS"
+    tickers: ["JNJ", "PG", "KO", "PEP", "MMM", "EMR", "CL", "LOW", "SWK", "ITW"]
+
+  - name: "GLOBAL_ETF"
+    tickers: ["SPY", "QQQ", "EFA", "EEM", "VWO", "GLD", "TLT", "VNQ", "LQD", "HYG"]
+    # S&P500, Nasdaq, Europa/Asia, Emergentes, Oro, Bonos, REITs, Corp Bonds
+
+  - name: "BALANCED_60_40"
+    tickers: ["SPY", "AGG"]
+    # 60% acciones, 40% bonos (clásico)
+
+  - name: "ALL_WEATHER"
+    tickers: ["SPY", "TLT", "IEF", "GLD", "DBC"]
+    # Ray Dalio style: acciones, bonos largo, bonos medio, oro, commodities
+
+  - name: "TECH_SEMICONDUCTORS"
+    tickers: ["NVDA", "AMD", "INTC", "AVGO", "QCOM", "TSM", "MU", "AMAT", "LRCX", "KLAC"]
+
+  - name: "HEALTHCARE"
+    tickers: ["JNJ", "UNH", "PFE", "ABBV", "MRK", "LLY", "TMO", "ABT", "DHR", "BMY"]
+
+  - name: "FINANCIALS"
+    tickers: ["JPM", "BAC", "WFC", "GS", "MS", "C", "BLK", "SCHW", "AXP", "USB"]
+
+  - name: "CLEAN_ENERGY"
+    tickers: ["ENPH", "SEDG", "FSLR", "NEE", "PLUG", "RUN", "ICLN", "TAN", "BEP", "CSIQ"]
+
+  - name: "IPSA_TOP10"
+    tickers: ["COPEC.SN", "SQM-B.SN", "BSANTANDER.SN", "CHILE.SN", "CENCOSUD.SN", "FALABELLA.SN", "ENELAM.SN", "CCU.SN", "CMPC.SN", "VAPORES.SN"]
+
+  - name: "CHILE_RETAIL"
+    tickers: ["CENCOSUD.SN", "FALABELLA.SN", "RIPLEY.SN", "SMU.SN", "FORUS.SN"]
+
+  - name: "CHILE_BANCOS"
+    tickers: ["BSANTANDER.SN", "CHILE.SN", "BCI.SN", "ITAUCORP.SN", "SECURITY.SN"]
+
+  - name: "CHILE_COMMODITIES"
+    tickers: ["SQM-B.SN", "COPEC.SN", "CMPC.SN", "CAP.SN", "MOLYMET.SN"]
+
+  - name: "CHILE_UTILITIES"
+    tickers: ["ENELAM.SN", "ENELCHILE.SN", "COLBUN.SN", "AGUAS-A.SN", "ECL.SN"]
+
+  - name: "CHILE_DIVERSIFIED"
+    tickers: ["SQM-B.SN", "BSANTANDER.SN", "CENCOSUD.SN", "ENELAM.SN", "COPEC.SN", "CCU.SN", "CMPC.SN", "CHILE.SN"]
+    # Commodities, Banca, Retail, Utilities, Forestal, Consumo

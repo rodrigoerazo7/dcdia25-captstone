@@ -1,0 +1,5 @@
+* [Inicio](/)
+* [Resultados](docs/resultados.md)
+* [Reporte Técnico](/docs/reporte.pdf ':ignore target=_blank')
+* [Backlog del Proyecto](docs/backlog.md)
+* [API](docs/api.md)
